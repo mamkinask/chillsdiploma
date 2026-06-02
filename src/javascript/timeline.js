@@ -104,14 +104,21 @@ function syncTimelinePageMinHeight() {
 
 function filterTimelineGroups(baseGroups, q) {
   if (!q) return baseGroups
+  var tokens = q
+    .replace(/ё/g, 'е')
+    .split(/\s+/)
+    .map(function (t) { return t.trim() })
+    .filter(Boolean)
   return baseGroups.map(function (g) {
     return {
       year: g.year,
       items: g.items.filter(function (item) {
-        return (item.Title || '').toLowerCase().indexOf(q) !== -1
-          || (item.Subgenres || item.Genres || '').toLowerCase().indexOf(q) !== -1
-          || (item.Type || '').toLowerCase().indexOf(q) !== -1
-          || (item.Description || '').toLowerCase().indexOf(q) !== -1
+        var title = (item.Title || '').toLowerCase().replace(/ё/g, 'е')
+        var titleEn = (item['Title EN'] || '').toLowerCase()
+        if (tokens.length === 0) return true
+        return tokens.every(function (t) {
+          return title.indexOf(t) !== -1 || titleEn.indexOf(t) !== -1
+        })
       })
     }
   }).filter(function (g) { return g.items.length > 0 })

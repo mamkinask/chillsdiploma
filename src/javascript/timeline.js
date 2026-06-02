@@ -121,6 +121,8 @@ function initSearch(baseGroups) {
   var searchInput = document.getElementById('timeline-search')
   var clearBtn = document.getElementById('timeline-search-clear')
   if (!searchInput) return
+  var zone = document.getElementById('timeline-zone')
+  var lastQ = ''
 
   function applySearch() {
     var q = searchInput.value.trim().toLowerCase()
@@ -128,6 +130,21 @@ function initSearch(baseGroups) {
     if (clearBtn) {
       clearBtn.hidden = !searchInput.value.trim()
     }
+
+    // If we were scrolled far right and the filtered content is narrower,
+    // the zone can end up beyond its new maxScroll and appear "empty".
+    if (zone) {
+      requestAnimationFrame(function () {
+        var maxScroll = Math.max(0, zone.scrollWidth - zone.clientWidth)
+        if (q && q !== lastQ) {
+          zone.scrollLeft = 0
+        } else if (zone.scrollLeft > maxScroll) {
+          zone.scrollLeft = maxScroll
+        }
+        zone.dispatchEvent(new Event('scroll'))
+      })
+    }
+    lastQ = q
   }
 
   searchInput.addEventListener('input', applySearch)

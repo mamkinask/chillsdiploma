@@ -1,0 +1,312 @@
+body {
+  background-color: #000;
+  background-image: url('../assets/media/elements_pictures/TimelineBackground.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.search-page {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 32px 80px 80px;
+  box-sizing: border-box;
+}
+
+.search-nav {
+  margin-bottom: 16px;
+}
+
+.search-back {
+  font-family: 'Greybeard 22px', sans-serif;
+  font-size: 15px;
+  color: #760000;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.search-back:hover {
+  color: #ff0000;
+}
+
+.search-title {
+  font-family: 'Greybeard 22px', sans-serif;
+  font-size: 48px;
+  color: #fff;
+  text-transform: uppercase;
+  margin: 0 0 28px;
+  line-height: 1;
+}
+
+.search-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.filter-panel {
+  background: #fff;
+  border: 2px dashed #000;
+  padding: 18px 20px;
+  box-sizing: border-box;
+}
+
+.filter-panel--wide {
+  grid-column: 1 / -1;
+}
+
+.filter-panel-title {
+  font-family: 'Greybeard 22px', sans-serif;
+  font-size: 18px;
+  color: #000;
+  text-transform: uppercase;
+  margin: 0 0 14px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #000;
+  letter-spacing: 0.04em;
+}
+
+.filter-options {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.filter-options--row {
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px 28px;
+}
+
+.filter-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.filter-option input[type="checkbox"],
+.filter-option input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #000;
+  cursor: pointer;
+  flex-shrink: 0;
+  position: relative;
+  background: #fff;
+  margin: 0;
+}
+
+.filter-option input[type="radio"] {
+  border-radius: 50%;
+}
+
+.filter-option input[type="checkbox"]:checked {
+  background: #d20000;
+  border-color: #d20000;
+}
+
+.filter-option input[type="checkbox"]:checked::after {
+  content: '×';
+  position: absolute;
+  top: -4px;
+  left: 1px;
+  color: #fff;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  line-height: 1;
+  font-weight: bold;
+}
+
+.filter-option input[type="radio"]:checked {
+  background: #d20000;
+  border-color: #d20000;
+}
+
+.filter-option input[type="radio"]:checked::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.filter-option-label {
+  font-family: 'Greybeard 22px', sans-serif;
+  font-size: 14px;
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  line-height: 1;
+}
+
+/* Scare level radio row */
+.scare-row {
+  display: flex;
+  gap: 6px;
+  align-items: stretch;
+}
+
+.scare-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  user-select: none;
+  flex: 1;
+  background: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 8px 4px;
+  box-sizing: border-box;
+}
+
+.scare-option input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #000;
+  border-radius: 50%;
+  cursor: pointer;
+  flex-shrink: 0;
+  position: relative;
+  background: #fff;
+  margin: 0;
+}
+
+.scare-option input[type="radio"]:checked {
+  background: #d20000;
+  border-color: #d20000;
+}
+
+.scare-option input[type="radio"]:checked::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.scare-option-label {
+  font-family: 'Greybeard 22px', sans-serif;
+  font-size: 18px;
+  color: #000;
+  line-height: 1;
+}
+
+.scare-option:has(input:checked) {
+  background: #ffe0e0;
+  border-color: #d20000;
+}
+
+/* Action buttons */
+.search-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 60px;
+}
+
+.search-btn-apply,
+.search-btn-reset {
+  padding: 16px;
+  border: 2px solid #fff;
+  font-family: 'Greybeard 22px', sans-serif;
+  font-size: 22px;
+  color: #fff;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-align: center;
+}
+
+.search-btn-apply {
+  background: #d20000;
+}
+
+.search-btn-apply:hover {
+  background: #ff0000;
+}
+
+.search-btn-reset {
+  background: #1900ff;
+}
+
+.search-btn-reset:hover {
+  background: #2a10ff;
+}
+
+/* Footer — сетка из shared.css, здесь только отступы контейнера */
+.search-page .o-footer {
+  position: relative;
+  left: auto;
+  top: auto;
+  width: 100%;
+  max-width: 100%;
+  margin-left: 0;
+  margin-top: 40px;
+  box-sizing: border-box;
+}
+
+/* ── Tablet 768–1023px ── */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .search-page {
+    padding: 24px 48px 60px;
+  }
+
+  .search-title {
+    font-size: 36px;
+  }
+
+  .search-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+}
+
+/* ── Mobile 360–767px ── */
+@media (max-width: 767px) {
+  .search-page {
+    padding: 16px 16px 48px;
+  }
+
+  .search-title {
+    font-size: 28px;
+    margin-bottom: 16px;
+  }
+
+  .search-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .filter-panel--wide {
+    grid-column: 1;
+  }
+
+  .search-actions {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .scare-row {
+    gap: 4px;
+  }
+
+  .scare-option-label {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Таймлайн — ЧИЛЛС</title>
+</head>
+<body>
+
+  <header class="o-header" data-name="O_Header">
+    <a href="../index.html" class="a-logo" aria-label="На главную">
+      <img src="../assets/media/elements_pictures/FillColorRed.svg" alt="">
+    </a>
+    <nav class="o-header-nav">
+      <a href="diagnostics.html" class="btn"><span class="blue">Д</span>ИАГНОСТИКА</a>
+      <a href="articles.html" class="btn"><span class="blue">Г</span>ИД</a>
+      <a href="timeline.html" class="btn btn--active"><span class="blue">Т</span>АЙМЛАЙН</a>
+    </nav>
+  </header>
+
+  <div class="scale-wrap">
+    <div class="timeline-page" data-name="Timline_page_1440_var1">
+
+      <div class="timeline-toolbar">
+        <div class="timeline-toolbar-top">
+          <div class="timeline-toolbar-left">
+            <a href="routes.html" class="btn-made-routes"><span>ГОТОВЫЕ МАРШРУТЫ</span></a>
+            <a href="search.html" class="btn-make-route"><span>СОСТАВИТЬ МАРШРУТ</span></a>
+          </div>
+          <div class="btn-search">
+            <div class="input-wrap">
+              <span class="search-icon" aria-hidden="true">
+                <img src="../assets/media/elements_pictures/Q_Search.svg" alt="">
+              </span>
+              <input type="text" placeholder="ПОИСК..." id="timeline-search" autocomplete="off">
+              <button type="button" class="search-clear" id="timeline-search-clear" aria-label="Очистить поиск" hidden>
+                <img src="../assets/media/elements_pictures/Q_SearchClear.svg" alt="">
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="active-filters-bar" id="active-filters-bar"></div>
+      </div>
+
+      <div class="timeline-zone" id="timeline-zone">
+        <div class="timeline-scroll" id="timeline-scroll">
+          <div class="timeline-line"></div>
+          <div class="year-groups" id="year-groups">
+            <!-- TIMELINE_PRERENDER -->
+            <div class="timeline-loading" id="timeline-loading">ЗАГРУЗКА...</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-scrubber-wrap" id="scrubber-wrap">
+        <div class="timeline-scrubber-track" id="scrubber-track">
+          <div class="timeline-scrubber-thumb" id="scrubber-thumb"></div>
+        </div>
+      </div>
+
+      <footer class="o-footer" data-name="O_Footer">
+        <div class="footer-logo">
+          <img src="../assets/media/elements_pictures/FillColorRed.svg" alt="ЧИЛЛС">
+        </div>
+        <div class="footer-right">
+          <div class="footer-info">
+            <div class="footer-col">
+              <div>
+                <p class="bold">Выполнила работу:</p>
+                <p class="regular">Мамкина Софья</p>
+              </div>
+              <div>
+                <p class="bold">Куратор:</p>
+                <p class="regular">Харитонов Захар</p>
+              </div>
+              <p class="red">Материалы защищены авторским правом,<br>и все права сохранены</p>
+            </div>
+            <div class="footer-col">
+              <div>
+                <p class="bold">Телеграм-канал</p>
+                <p class="regular">@smth</p>
+              </div>
+              <div>
+                <p class="bold">Электронная почта автора:</p>
+                <p class="regular">mamont09583@gmail.com</p>
+              </div>
+            </div>
+          </div>
+          <div class="footer-heart">
+            <img src="../assets/media/elements_pictures/Q_HSEART.png" alt="HSE Art and Design School">
+          </div>
+        </div>
+      </footer>
+
+    </div>
+  </div>
+
+</body>
+</html>

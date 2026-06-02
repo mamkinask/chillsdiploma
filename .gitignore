@@ -1,0 +1,8 @@
+node_modules/
+.claude/
+dev_build/
+.DS_Store
+*.log
+AIRTABLE.md
+DEVTOOLS_OVERRIDES.md
+media_v4.csv

@@ -1,0 +1,583 @@
+body {
+  background: #111;
+}
+
+.diag-page {
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+  min-height: 1360px;
+  margin: 0 auto;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.diag-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.diag-bg-img1 {
+  position: absolute;
+  inset: 0;
+}
+
+.diag-bg-img1 img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.diag-bg-grad {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.diag-bg-img2 {
+  display: none;
+}
+
+.diag-cta {
+  position: relative;
+  left: auto;
+  top: auto;
+  transform: none;
+  margin: 312px auto 0;
+  width: 535px;
+  height: 120px;
+  background: #1900ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  text-decoration: none;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.diag-cta:hover {
+  background: #2a10ff;
+}
+
+.diag-cta p {
+  font-family: 'Greybeard 22px', sans-serif;
+  font-size: 64px;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+  margin: 0;
+}
+
+.diag-hand {
+  position: absolute;
+  top: 302px;
+  width: 508px;
+  height: 260px;
+  overflow: hidden;
+  z-index: 5;
+}
+
+.diag-hand img {
+  position: absolute;
+  top: -36px;
+  left: -33px;
+  width: 563px;
+  height: 326px;
+  object-fit: cover;
+}
+
+.diag-hand--left {
+  left: -98px;
+  transform: scaleX(-1);
+}
+
+.diag-hand--right {
+  left: 1031px;
+}
+
+@keyframes diag-intro-fade {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.diag-intro {
+  position: relative;
+  left: auto;
+  top: auto;
+  transform: none;
+  margin: 54px auto 0;
+  width: 632px;
+  height: 158px;
+  background: #4e4e4e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  z-index: 10;
+  animation: diag-intro-fade 3s ease-in-out infinite;
+}
+
+.diag-intro .text {
+  font-family: 'Times New Roman', serif;
+  font-size: 20px;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 1.4;
+  max-width: 578px;
+  text-shadow: 0 7px 4px rgba(0, 0, 0, 0.5);
+}
+
+.diag-intro .text p {
+  margin: 0 0 0.1em;
+}
+
+.diag-intro .text u {
+  text-decoration: underline;
+}
+
+.deco {
+  position: absolute;
+  font-family: 'Greybeard 22px', sans-serif;
+  font-size: 64px;
+  line-height: 1;
+  color: #848484;
+  white-space: nowrap;
+  z-index: 3;
+}
+
+.deco--box-white {
+  background: #fff;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.deco--red {
+  color: red;
+}
+
+.deco--black {
+  color: #000;
+}
+
+.deco--center {
+  transform: translateX(-50%);
+}
+
+.diag-page .o-footer {
+  position: relative;
+  left: auto;
+  top: auto;
+  width: calc(100% - 160px);
+  margin: auto auto 0;
+  padding-top: 48px;
+  padding-bottom: 40px;
+  box-sizing: border-box;
+  z-index: 10;
+  align-self: center;
+}
+
+.diag-page .footer-col--info,
+.diag-page .footer-col--contacts {
+  width: auto;
+  min-width: 0;
+}
+
+.diag-deco--1 {
+  left: 686px;
+  top: 78px;
+}
+
+.diag-deco--2 {
+  left: 1284px;
+  top: 114px;
+}
+
+.diag-deco--3 {
+  left: 93px;
+  top: 127px;
+}
+
+.diag-deco--4 {
+  left: 1065px;
+  top: 131px;
+}
+
+.diag-deco--5 {
+  left: 312px;
+  top: 159px;
+}
+
+.diag-deco--6 {
+  left: 263px;
+  top: 504px;
+}
+
+.diag-deco--7 {
+  left: 1254px;
+  top: 498px;
+  width: 62px;
+}
+
+.diag-deco--8 {
+  left: 147px;
+  top: 566px;
+}
+
+.diag-deco--9 {
+  left: 76px;
+  top: 704px;
+  width: 74px;
+}
+
+.diag-deco--10 {
+  left: 209px;
+  top: 704px;
+}
+
+.diag-deco--11 {
+  left: 1160px;
+  top: 683px;
+  width: 52px;
+}
+
+.diag-deco--12 {
+  left: 1338px;
+  top: 731px;
+}
+
+.diag-deco--13 {
+  left: 583px;
+  top: 778px;
+}
+
+.diag-deco--14 {
+  left: 1068px;
+  top: 761px;
+}
+
+.diag-deco--15 {
+  left: 296px;
+  top: 892px;
+  width: 52px;
+}
+
+.diag-deco--16 {
+  left: 906px;
+  top: 919px;
+}
+
+.diag-deco--17 {
+  left: 1228px;
+  top: 934px;
+}
+
+/* ── Large screen 1240–1439px ── */
+@media (min-width: 1240px) and (max-width: 1439px) {
+  .diag-page {
+    width: 100%;
+    min-height: auto;
+    overflow: visible;
+    padding-bottom: 60px;
+  }
+
+  .diag-cta {
+    position: relative;
+    left: auto;
+    top: auto;
+    transform: none;
+    width: 535px;
+    height: auto;
+    padding: 20px 12px;
+    margin: 120px auto 0;
+  }
+
+  .diag-cta p {
+    font-size: 56px;
+    white-space: normal;
+    text-align: center;
+  }
+
+  .diag-hand,
+  .deco {
+    display: none;
+  }
+
+  .diag-intro {
+    position: relative;
+    left: auto;
+    top: auto;
+    transform: none;
+    width: 600px;
+    height: auto;
+    padding: 20px;
+    margin: 32px auto 0;
+  }
+
+  .diag-intro .text {
+    font-size: 20px;
+    max-width: 100%;
+  }
+
+  .diag-page .o-footer {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: calc(100% - 160px);
+    padding: 0;
+    box-sizing: border-box;
+    margin: auto auto 0;
+    padding-top: 60px;
+  }
+
+  .diag-page .footer-col--info,
+  .diag-page .footer-col--contacts {
+    width: auto;
+  }
+}
+
+/* ── Small laptop 1024–1239px (1240–1439 — отдельный блок ниже) ── */
+@media (min-width: 1024px) and (max-width: 1239px) {
+  .diag-page {
+    width: 100%;
+    min-height: auto;
+    overflow: visible;
+    padding-bottom: 60px;
+  }
+
+  .diag-cta {
+    position: relative;
+    left: auto;
+    top: auto;
+    transform: none;
+    width: 535px;
+    height: auto;
+    padding: 20px 12px;
+    margin: 120px auto 0;
+  }
+
+  .diag-cta p {
+    font-size: 56px;
+    white-space: normal;
+    text-align: center;
+  }
+
+  .diag-hand,
+  .deco {
+    display: none;
+  }
+
+  .diag-intro {
+    position: relative;
+    left: auto;
+    top: auto;
+    transform: none;
+    width: 600px;
+    height: auto;
+    padding: 20px;
+    margin: 32px auto 0;
+  }
+
+  .diag-intro .text {
+    font-size: 20px;
+    max-width: 100%;
+  }
+
+  .diag-page .o-footer {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: calc(100% - 160px);
+    padding: 0;
+    box-sizing: border-box;
+    margin: auto auto 0;
+    padding-top: 60px;
+  }
+
+  .diag-page .footer-col--info,
+  .diag-page .footer-col--contacts {
+    width: auto;
+  }
+}
+
+/* ── Tablet 768–1023px ── */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .diag-page {
+    width: 100%;
+    min-height: auto;
+    overflow: visible;
+    padding-bottom: 40px;
+  }
+
+  .diag-cta {
+    position: relative;
+    left: auto;
+    top: auto;
+    transform: none;
+    width: 480px;
+    height: auto;
+    padding: 20px 12px;
+    margin: 100px auto 0;
+  }
+
+  .diag-cta p {
+    font-size: 48px;
+    white-space: normal;
+    text-align: center;
+  }
+
+  .diag-hand,
+  .deco {
+    display: none;
+  }
+
+  .diag-intro {
+    position: relative;
+    left: auto;
+    top: auto;
+    transform: none;
+    width: 560px;
+    height: auto;
+    padding: 20px;
+    margin: 28px auto 0;
+  }
+
+  .diag-intro .text {
+    font-size: 18px;
+    max-width: 100%;
+  }
+
+  .diag-page .o-footer {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: 100%;
+    padding: 0 48px;
+    box-sizing: border-box;
+    margin: auto auto 0;
+    padding-top: 48px;
+  }
+
+  .diag-page .footer-col--info,
+  .diag-page .footer-col--contacts {
+    width: auto;
+  }
+}
+
+/* ── Mobile 360–768px ── */
+@media (min-width: 360px) and (max-width: 768px) {
+  .diag-page {
+    transform: none !important;
+    width: 100%;
+    min-height: auto;
+    overflow: visible;
+    padding-bottom: 40px;
+  }
+
+  /* CTA button: flow, centred */
+  .diag-cta {
+    position: relative;
+    left: auto;
+    top: auto;
+    transform: none;
+    width: calc(100% - 32px);
+    height: auto;
+    padding: 20px 12px;
+    margin: 80px auto 0;
+  }
+
+  .diag-cta p {
+    font-size: 32px;
+    white-space: normal;
+    text-align: center;
+  }
+
+  /* Hands and decorative chars: hide */
+  .diag-hand,
+  .deco {
+    display: none;
+  }
+
+  /* Intro text block: flow */
+  .diag-intro {
+    position: relative;
+    left: auto;
+    top: auto;
+    transform: none;
+    width: calc(100% - 32px);
+    height: auto;
+    padding: 16px;
+    margin: 24px auto 0;
+  }
+
+  .diag-intro .text {
+    font-size: 15px;
+    max-width: 100%;
+  }
+
+  /* Footer — match index.html mobile layout (shared.css grid takes over) */
+  .diag-page .o-footer {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: 100%;
+    margin: auto auto 0;
+    padding-top: 32px;
+  }
+
+  .diag-page .footer-col--info,
+  .diag-page .footer-col--contacts {
+    width: auto;
+  }
+}
+
+/* ── До 1439px: GIF от верха вьюпорта на весь экран (включая 1240–1439; с 1440 — фон внутри макета 1440) ── */
+@media (max-width: 1439px) {
+  .diag-page {
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
+
+  .diag-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+    min-height: 100vh;
+    min-height: 100dvh;
+    z-index: 0;
+  }
+
+  .diag-bg-img1 {
+    position: absolute;
+    inset: 0;
+  }
+
+  .diag-bg-img1 img {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  .diag-bg-grad {
+    position: absolute;
+    inset: 0;
+  }
+}

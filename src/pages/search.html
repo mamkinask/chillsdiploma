@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Составить маршрут — ЧИЛЛС</title>
+</head>
+<body>
+
+  <header class="o-header" data-name="O_Header">
+    <a href="../index.html" class="a-logo" aria-label="На главную">
+      <img src="../assets/media/elements_pictures/FillColorRed.svg" alt="">
+    </a>
+    <nav class="o-header-nav">
+      <a href="diagnostics.html" class="btn"><span class="blue">Д</span>ИАГНОСТИКА</a>
+      <a href="articles.html" class="btn"><span class="blue">Г</span>ИД</a>
+      <a href="timeline.html" class="btn btn--active"><span class="blue">Т</span>АЙМЛАЙН</a>
+    </nav>
+  </header>
+
+  <div class="search-page">
+
+    <div class="search-nav">
+      <a href="timeline.html" class="search-back">← К ТАЙМЛАЙНУ</a>
+    </div>
+
+    <h1 class="search-title">СОСТАВИТЬ МАРШРУТ</h1>
+
+    <div class="search-grid" id="search-filters">
+
+      <!-- МЕДИАФОРМАТ -->
+      <div class="filter-panel">
+        <div class="filter-panel-title">Медиаформат</div>
+        <div class="filter-options filter-options--row">
+          <label class="filter-option">
+            <input type="checkbox" name="type" value="Фильм">
+            <span class="filter-option-label">Фильм</span>
+          </label>
+          <label class="filter-option">
+            <input type="checkbox" name="type" value="Сериал">
+            <span class="filter-option-label">Сериал</span>
+          </label>
+          <label class="filter-option">
+            <input type="checkbox" name="type" value="Игра">
+            <span class="filter-option-label">Игра</span>
+          </label>
+          <label class="filter-option">
+            <input type="checkbox" name="type" value="Книга">
+            <span class="filter-option-label">Книга</span>
+          </label>
+          <label class="filter-option">
+            <input type="checkbox" name="type" value="Комикс">
+            <span class="filter-option-label">Комикс</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- ГОД / ДЕКАДА -->
+      <div class="filter-panel">
+        <div class="filter-panel-title">Год / Декада</div>
+        <div class="filter-options filter-options--row">
+          <label class="filter-option">
+            <input type="checkbox" name="decade" value="до1980х">
+            <span class="filter-option-label">до 1980х</span>
+          </label>
+          <label class="filter-option">
+            <input type="checkbox" name="decade" value="1980е">
+            <span class="filter-option-label">1980е</span>
+          </label>
+          <label class="filter-option">
+            <input type="checkbox" name="decade" value="1990е">
+            <span class="filter-option-label">1990е</span>
+          </label>
+          <label class="filter-option">
+            <input type="checkbox" name="decade" value="2000е">
+            <span class="filter-option-label">2000е</span>
+          </label>
+          <label class="filter-option">
+            <input type="checkbox" name="decade" value="2010е">
+            <span class="filter-option-label">2010е</span>
+          </label>
+          <label class="filter-option">
+            <input type="checkbox" name="decade" value="2020е">
+            <span class="filter-option-label">2020е</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- ТИП СТРАХА -->
+      <div class="filter-panel">
+        <div class="filter-panel-title">Тип страха</div>
+        <div class="filter-options filter-options--row">
+          <label class="filter-option">
+            <input type="checkbox" name="fear" value="Психологический">
+            <span class="filter-option-label">Психологический</span>
+          </label>
+          <label class="filter-option">
+            <input type="checkbox" name="fear" value="Сверхъестественный">
+            <span class="filter-option-label">Сверхъестественный</span>
+          </label>
+          <label class="filter-option">
+            <input type="checkbox" name="fear" value="Монстры">
+            <span class="filter-option-label">Монстры</span>
+          </label>
+          <label class="filter-option">
+            <input type="checkbox" name="fear" value="Маньяк">
+            <span class="filter-option-label">Маньяк</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- УРОВЕНЬ СТРАХА -->
+      <div class="filter-panel">
+        <div class="filter-panel-title">Уровень страха (минимум)</div>
+        <div class="scare-row">
+          <label class="scare-option">
+            <input type="radio" name="scare" value="1">
+            <span class="scare-option-label">1</span>
+          </label>
+          <label class="scare-option">
+            <input type="radio" name="scare" value="2">
+            <span class="scare-option-label">2</span>
+          </label>
+          <label class="scare-option">
+            <input type="radio" name="scare" value="3">
+            <span class="scare-option-label">3</span>
+          </label>
+          <label class="scare-option">
+            <input type="radio" name="scare" value="4">
+            <span class="scare-option-label">4</span>
+          </label>
+          <label class="scare-option">
+            <input type="radio" name="scare" value="5">
+            <span class="scare-option-label">5</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- ПОДЖАНР (wide) -->
+      <div class="filter-panel filter-panel--wide">
+        <div class="filter-panel-title">Поджанр</div>
+        <div class="filter-options filter-options--row">
+          <label class="filter-option">
+            <input type="checkbox" name="subgenre" value="Психологический хоррор">
+            <span class="filter-option-label">Психологический хоррор</span>
+          </label>
+          <label class="filter-option">
+            <input type="checkbox" name="subgenre" value="Триллер">
+            <span class="filter-option-label">Триллер</span>
+          </label>
+          <label class="filter-option">
+            <input type="checkbox" name="subgenre" value="Слэшер">
+            <span class="filter-option-label">Слэшер</span>
+          </label>
+          <label class="filter-option">
+            <input type="checkbox" name="subgenre" value="Монстр-хоррор">
+            <span class="filter-option-label">Монстр-хоррор</span>
+          </label>
+          <label class="filter-option">
+            <input type="checkbox" name="subgenre" value="Зомби-хоррор">
+            <span class="filter-option-label">Зомби-хоррор</span>
+          </label>
+          <label class="filter-option">
+            <input type="checkbox" name="subgenre" value="Выживание">
+            <span class="filter-option-label">Выживание</span>
+          </label>
+          <label class="filter-option">
+            <input type="checkbox" name="subgenre" value="Боди-хоррор">
+            <span class="filter-option-label">Боди-хоррор</span>
+          </label>
+          <label class="filter-option">
+            <input type="checkbox" name="subgenre" value="Фолк-хоррор">
+            <span class="filter-option-label">Фолк-хоррор</span>
+          </label>
+          <label class="filter-option">
+            <input type="checkbox" name="subgenre" value="Мистика">
+            <span class="filter-option-label">Мистика</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- СТРАНА -->
+      <div class="filter-panel">
+        <div class="filter-panel-title">Страна</div>
+        <div class="filter-options filter-options--row">
+          <label class="filter-option">
+            <input type="checkbox" name="country" value="США">
+            <span class="filter-option-label">США</span>
+          </label>
+          <label class="filter-option">
+            <input type="checkbox" name="country" value="Япония">
+            <span class="filter-option-label">Япония</span>
+          </label>
+          <label class="filter-option">
+            <input type="checkbox" name="country" value="Великобритания">
+            <span class="filter-option-label">Великобритания</span>
+          </label>
+          <label class="filter-option">
+            <input type="checkbox" name="country" value="Франция">
+            <span class="filter-option-label">Франция</span>
+          </label>
+          <label class="filter-option">
+            <input type="checkbox" name="country" value="Австралия">
+            <span class="filter-option-label">Австралия</span>
+          </label>
+          <label class="filter-option">
+            <input type="checkbox" name="country" value="Италия">
+            <span class="filter-option-label">Италия</span>
+          </label>
+          <label class="filter-option">
+            <input type="checkbox" name="country" value="Южная Корея">
+            <span class="filter-option-label">Южная Корея</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- ЭМОЦИИ -->
+      <div class="filter-panel">
+        <div class="filter-panel-title">Эмоции</div>
+        <div class="filter-options filter-options--row">
+          <label class="filter-option">
+            <input type="checkbox" name="emotion" value="Страх">
+            <span class="filter-option-label">Страх</span>
+          </label>
+          <label class="filter-option">
+            <input type="checkbox" name="emotion" value="Напряжение">
+            <span class="filter-option-label">Напряжение</span>
+          </label>
+          <label class="filter-option">
+            <input type="checkbox" name="emotion" value="Отвращение">
+            <span class="filter-option-label">Отвращение</span>
+          </label>
+          <label class="filter-option">
+            <input type="checkbox" name="emotion" value="Паранойя">
+            <span class="filter-option-label">Паранойя</span>
+          </label>
+          <label class="filter-option">
+            <input type="checkbox" name="emotion" value="Тоска">
+            <span class="filter-option-label">Тоска</span>
+          </label>
+          <label class="filter-option">
+            <input type="checkbox" name="emotion" value="Одиночество">
+            <span class="filter-option-label">Одиночество</span>
+          </label>
+          <label class="filter-option">
+            <input type="checkbox" name="emotion" value="Тревога">
+            <span class="filter-option-label">Тревога</span>
+          </label>
+          <label class="filter-option">
+            <input type="checkbox" name="emotion" value="Любопытство">
+            <span class="filter-option-label">Любопытство</span>
+          </label>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="search-actions">
+      <button class="search-btn-apply" id="search-apply">ПРИМЕНИТЬ</button>
+      <button class="search-btn-reset" id="search-reset">СБРОСИТЬ</button>
+    </div>
+
+    <footer class="o-footer" data-name="O_Footer">
+      <div class="footer-logo">
+        <img src="../assets/media/elements_pictures/FillColorRed.svg" alt="ЧИЛЛС">
+      </div>
+      <div class="footer-right">
+        <div class="footer-info">
+          <div class="footer-col">
+            <div>
+              <p class="bold">Выполнила работу:</p>
+              <p class="regular">Мамкина Софья</p>
+            </div>
+            <div>
+              <p class="bold">Куратор:</p>
+              <p class="regular">Харитонов Захар</p>
+            </div>
+            <p class="red">Материалы защищены авторским правом,<br>и все права сохранены</p>
+          </div>
+          <div class="footer-col">
+            <div>
+              <p class="bold">Телеграм-канал</p>
+              <p class="regular">@smth</p>
+            </div>
+            <div>
+              <p class="bold">Электронная почта автора:</p>
+              <p class="regular">mamont09583@gmail.com</p>
+            </div>
+          </div>
+        </div>
+        <div class="footer-heart">
+          <img src="../assets/media/elements_pictures/Q_HSEART.png" alt="HSE Art and Design School">
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+</body>
+</html>

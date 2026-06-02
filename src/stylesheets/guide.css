@@ -1,0 +1,717 @@
+body {
+  background: #111;
+}
+
+.guide-page {
+  position: relative;
+  width: 1440px;
+  min-height: 100px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.guide-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.guide-bg img {
+  position: absolute;
+  top: 0;
+  left: -11%;
+  width: 122%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.guide-bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(270deg, rgba(0, 0, 0, 0.53) 8%, rgba(58, 58, 58, 0.4) 16%, rgba(255, 255, 255, 0) 46%, rgba(68, 68, 68, 0.55) 80%, rgba(0, 0, 0, 0.75) 97%);
+}
+
+.guide-main {
+  position: relative;
+  z-index: 10;
+  padding: 87px 80px 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 27px;
+}
+
+.guide-nav-row {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.guide-back {
+  border: 2px solid #fff;
+  padding: 4px;
+  text-decoration: none;
+  display: inline-flex;
+  flex-direction: column;
+  cursor: pointer;
+  background: transparent;
+}
+
+.guide-back:hover {
+  opacity: 0.8;
+}
+
+.guide-back-inner {
+  border: 1px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 4px 8px;
+  white-space: nowrap;
+}
+
+.guide-back-arrow {
+  font-size: 20px;
+  color: #fff;
+  line-height: 1;
+}
+
+.guide-back-text {
+  font-family: 'Greybeard 22px', sans-serif;
+  font-size: 18px;
+  color: #fff;
+}
+
+.guide-content {
+  width: calc(1440px - 160px);
+  display: flex;
+  flex-direction: column;
+  gap: 200px;
+  padding: 4px 0;
+}
+
+.guide-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+}
+
+.guide-title-bar {
+  background: #fff;
+  border: 3px solid #760000;
+  height: 99px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.guide-title-inner {
+  border: 3px solid #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4px 0;
+  width: calc(100% - 20px);
+}
+
+.guide-title-text {
+  font-family: 'Greybeard 22px', sans-serif;
+  font-size: 36px;
+  color: red;
+  text-align: center;
+  padding: 2px 8px;
+  font-style: italic;
+}
+
+.guide-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  width: 100%;
+}
+
+.guide-section-heading {
+  background: #fff;
+  padding: 10px 16px;
+  font-family: 'Greybeard 22px', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #000;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.guide-section-body {
+  background: #fff;
+  padding: 10px 16px 16px;
+  font-family: 'Times New Roman', serif;
+  font-size: 18px;
+  color: #000;
+  line-height: 1.55;
+  width: 100%;
+}
+
+.guide-section-body p {
+  margin-bottom: 0.8em;
+}
+
+.guide-section-body p:last-child {
+  margin-bottom: 0;
+}
+
+.guide-section-img {
+  border: 3px solid #1900ff;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  aspect-ratio: 16/9;
+}
+
+.guide-section-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.guide-darkred-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.guide-darkred-block {
+  background: #a20000;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.guide-darkred-block .guide-section-heading {
+  background: transparent;
+  color: #fff;
+  padding: 0 0 6px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.guide-darkred-block .guide-section-body {
+  background: transparent;
+  color: #fff;
+  padding: 0;
+}
+
+.guide-imgs-row {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+}
+
+.guide-img-pair {
+  flex: 1;
+  border: 2px solid #fff;
+  overflow: hidden;
+  aspect-ratio: 16/9;
+}
+
+.guide-img-pair img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.guide-film-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.guide-film-header {
+  background: red;
+  padding: 8px 24px;
+  font-family: 'Greybeard 22px', sans-serif;
+  font-size: 28px;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  width: 100%;
+}
+
+.guide-arrow-down {
+  font-size: 64px;
+  color: #fff;
+  line-height: 1;
+  text-align: center;
+}
+
+.guide-poster-link {
+  display: block;
+  text-decoration: none;
+}
+
+.guide-poster {
+  border: 4px solid red;
+  width: 308px;
+  height: 436px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(255, 0, 0, 0.4);
+  background: #1a1a1a;
+}
+
+.guide-poster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.guide-poster:hover {
+  opacity: 0.9;
+}
+
+/* Подробнее о произведениях */
+.guide-media-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.guide-media-header {
+  background: #a20000;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 2px;
+  box-sizing: border-box;
+}
+
+.guide-media-header span {
+  font-family: 'Greybeard 22px', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #001aff;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.guide-media-cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 24px;
+  width: 100%;
+}
+
+.guide-media-card-link {
+  display: block;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.guide-media-card {
+  width: 200px;
+  height: 284px;
+  border: 2px solid #3700ff;
+  overflow: hidden;
+  background: #1a1a1a;
+}
+
+.guide-media-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.guide-media-card-link:hover .guide-media-card {
+  opacity: 0.85;
+}
+
+.o-footer {
+  width: calc(1440px - 160px);
+}
+
+/* Blue title bar variant (without_monster и др.) */
+.guide-title-bar--blue {
+  border-color: #2600ff;
+  height: auto;
+  min-height: 99px;
+  padding: 16px 0;
+}
+
+.guide-title-bar--blue .guide-title-inner {
+  border-color: #4000ff;
+  height: auto;
+  padding: 8px 16px;
+}
+
+.guide-title-bar--blue .guide-title-text {
+  color: #4000ff;
+  font-size: 40px;
+  font-style: normal;
+  white-space: normal;
+  word-break: break-word;
+}
+
+/* Section with 1px blue border (without_monster) */
+.guide-section-bordered {
+  border: 1px solid #4000ff;
+  width: 100%;
+}
+
+/* Found footage image block wrapper */
+.ff-img-block {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+/* Отступы между текстом и картинками */
+.guide-section-body + .guide-section-img,
+.guide-section-body + .ff-img-block,
+.guide-section-body + .guide-imgs-row,
+.guide-section-body + .ff-imgs-row {
+  margin-top: 10px;
+}
+
+.guide-section-img + .guide-section-body,
+.ff-img-block + .guide-section-body,
+.guide-imgs-row + .guide-section-body {
+  margin-top: 10px;
+}
+
+/* Blue inline decorators in title */
+.guide-title-text .blue-inline {
+  color: #4000ff;
+}
+
+/* Found footage: no blue border */
+.ff-no-border {
+  border: none;
+}
+
+/* Caption bar under image */
+.ff-caption {
+  background: #000;
+  color: #fff;
+  font-family: 'Times New Roman', serif;
+  font-size: 14px;
+  text-align: center;
+  padding: 6px 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Two images side by side */
+.ff-imgs-row {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+}
+
+.ff-imgs-row .guide-section-img {
+  flex: 1;
+}
+
+/* ── Works section on guide pages ── */
+.guide-works-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  width: 100%;
+}
+
+.guide-works-heading {
+  background: #760000;
+  color: #fff;
+  font-family: 'Greybeard 22px', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  padding: 6px 16px;
+}
+
+.guide-works-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding: 16px 0 0;
+}
+
+.guide-works-row .media-card {
+  width: 200px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.guide-works-row .media-card:hover .media-card-img {
+  opacity: 0.8;
+}
+
+.guide-works-row .media-card-img {
+  width: 200px;
+  height: 284px;
+  overflow: hidden;
+  background: #1a1a1a;
+  transition: opacity 0.15s;
+}
+
+.guide-works-row .media-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.guide-works-row .media-card-title {
+  font-family: 'Times New Roman', serif;
+  font-size: 12px;
+  color: #fff;
+  line-height: 1.3;
+  text-align: center;
+  padding: 0 2px;
+}
+
+/* ── Large screen 1240–1439px ── */
+@media (min-width: 1240px) and (max-width: 1439px) {
+  .guide-page {
+    width: 100%;
+    overflow: visible;
+  }
+
+  .guide-content {
+    width: 100%;
+  }
+
+  .o-footer {
+    width: 100%;
+  }
+}
+
+/* ── Small laptop 1024–1279px ── */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .guide-page {
+    width: 100%;
+    overflow: visible;
+  }
+
+  .guide-content {
+    width: 100%;
+  }
+
+  .o-footer {
+    width: 100%;
+  }
+}
+
+/* ── Tablet 768–1023px ── */
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* Release fixed 1440px container */
+  .guide-page {
+    width: 100%;
+    overflow: visible;
+  }
+
+  /* Reduce side padding; keep desktop top/bottom values */
+  .guide-main {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  /* Content column: full width within tablet padding */
+  .guide-content {
+    width: 100%;
+  }
+
+  /* Footer: full width on tablet */
+  .o-footer {
+    width: 100%;
+  }
+}
+
+/* ── Mobile 360–768px ── */
+@media (min-width: 360px) and (max-width: 768px) {
+  .guide-page {
+    width: 100%;
+    min-height: auto;
+    overflow: visible;
+  }
+
+  .guide-bg img {
+    left: 0;
+    width: 100%;
+  }
+
+  .guide-main {
+    padding: 16px 16px 40px;
+    gap: 16px;
+  }
+
+  .guide-nav-row {
+    gap: 10px;
+  }
+
+  .guide-back-text {
+    font-size: 14px;
+  }
+
+  .guide-content {
+    width: 100%;
+    gap: 40px;
+    padding: 0;
+  }
+
+  .guide-sections {
+    gap: 20px;
+  }
+
+  /* Title bars */
+  .guide-title-bar {
+    height: auto;
+    min-height: 56px;
+    padding: 8px 0;
+  }
+
+  .guide-title-inner {
+    padding: 6px 8px;
+    width: calc(100% - 12px);
+    height: auto;
+  }
+
+  .guide-title-text {
+    font-size: 20px;
+  }
+
+  .guide-title-bar--blue {
+    padding: 8px 0;
+    min-height: 56px;
+  }
+
+  .guide-title-bar--blue .guide-title-inner {
+    padding: 6px 8px;
+  }
+
+  .guide-title-bar--blue .guide-title-text {
+    font-size: 20px;
+  }
+
+  /* Section text */
+  .guide-section-heading {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  .guide-section-body {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  /* Images */
+  .guide-section-img {
+    width: 100%;
+    border-width: 2px;
+  }
+
+  .guide-imgs-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .ff-imgs-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .ff-caption,
+  .guide-caption {
+    font-size: 11px;
+    padding: 4px 8px;
+  }
+
+  /* Poster */
+  .guide-poster {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 2/3;
+  }
+
+  .guide-film-header {
+    font-size: 18px;
+  }
+
+  /* Darkred block */
+  .guide-darkred-block .guide-section-heading {
+    font-size: 14px;
+  }
+
+  .guide-darkred-block .guide-section-body {
+    font-size: 14px;
+  }
+
+  /* Media cards: wrap, 2 per row */
+  .guide-media-cards {
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+  }
+
+  .guide-media-card {
+    width: calc(50% - 6px);
+    height: auto;
+    aspect-ratio: 200/284;
+  }
+
+  /* Works section: 2-column grid */
+  .guide-works-row {
+    flex-wrap: wrap;
+    padding-bottom: 0;
+  }
+
+  .guide-works-row .media-card {
+    width: calc(50% - 8px);
+  }
+
+  .guide-works-row .media-card-img {
+    width: 100%;
+    height: 0;
+    padding-bottom: 150%;
+    position: relative;
+  }
+
+  .guide-works-row .media-card-img img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* Footer — match index.html (shared.css grid takes over) */
+  .o-footer {
+    width: 100%;
+  }
+
+  .guide-main > .o-footer,
+  .guide-main footer.o-footer {
+    width: 100%;
+    margin-top: 24px;
+  }
+}

@@ -1,0 +1,566 @@
+body {
+  background: #000;
+}
+
+.test-page {
+  position: relative;
+  width: 1440px;
+  min-height: 100vh;
+  margin: 0 auto;
+  background: #111;
+}
+
+.test-bg {
+  position: absolute;
+  top: -57px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.test-bg img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.test-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 1;
+}
+
+.o-footer {
+  position: relative;
+  z-index: 10;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(1440px - 160px);
+  padding: 40px 0 60px;
+}
+
+.test-progress {
+  position: relative;
+  z-index: 10;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 500px;
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.test-progress-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #4e4e4e;
+  border: 2px solid #888;
+  transition: background 0.2s;
+  cursor: pointer;
+}
+
+.test-progress-dot.active {
+  background: #1900ff;
+  border-color: #1900ff;
+}
+
+.test-progress-dot.done {
+  background: #333;
+  border-color: #666;
+}
+
+.test-content {
+  position: relative;
+  z-index: 10;
+  width: 1061px;
+  margin: 24px auto 0;
+}
+
+.test-card {
+  display: none;
+  background: #000;
+  border: 2px solid #fff;
+  box-shadow: 5px 4px 12px rgba(255, 255, 255, 0.25);
+  overflow: hidden;
+  min-height: 741px;
+}
+
+.test-card.current {
+  display: block;
+}
+
+.test-card-image {
+  width: 100%;
+  height: 289px;
+  background: #d9d9d9;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.test-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.test-card-image:empty {
+  min-height: 120px;
+}
+
+.test-card-body {
+  padding: 23px 23px 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.test-card-header {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.test-card-number {
+  font-family: 'Greybeard 22px', sans-serif;
+  font-size: 32px;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.test-card-question {
+  font-family: 'Greybeard 22px', sans-serif;
+  font-size: 32px;
+  color: #fff;
+  line-height: 1.2;
+  white-space: pre-wrap;
+}
+
+.test-card-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 553px;
+}
+
+.test-card-option {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  padding: 4px 2px;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: #fff;
+  font-family: 'Times New Roman', serif;
+  font-size: 16px;
+  text-align: left;
+}
+
+.test-card-option:hover {
+  opacity: 0.9;
+}
+
+.test-card-option .radio {
+  width: 17px;
+  height: 17px;
+  border: 2px solid #fff;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.test-card-option.selected .radio {
+  background: #1900ff;
+}
+
+.test-card-option .label {
+  flex: 1;
+}
+
+.test-card-nav {
+  position: absolute;
+  bottom: 78px;
+  right: 188px;
+  display: flex;
+  gap: 38px;
+  align-items: center;
+}
+
+.test-btn-back {
+  background: #5e5e5e;
+  border: 2px solid #fff;
+  padding: 4px 8px;
+  color: #fff;
+  font-family: 'Greybeard 22px', sans-serif;
+  font-size: 19px;
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+.test-btn-back:hover {
+  opacity: 1;
+}
+
+.test-btn-back:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.test-btn-next {
+  background: red;
+  border: 2px solid #fff;
+  padding: 4px 8px;
+  color: #fff;
+  font-family: 'Greybeard 22px', sans-serif;
+  font-size: 19px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.test-btn-next:hover {
+  background: #c00;
+}
+
+.test-btn-next:disabled {
+  background: #5e5e5e;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.test-btn-next:disabled:hover {
+  background: #5e5e5e;
+}
+
+.test-result {
+  display: none;
+  position: relative;
+  z-index: 10;
+  width: 800px;
+  margin: 32px auto 80px;
+  padding: 40px;
+  background: #4e4e4e;
+  text-align: center;
+}
+
+.test-result.visible {
+  display: block;
+}
+
+.test-result h2 {
+  font-family: 'Greybeard 22px', sans-serif;
+  font-size: 36px;
+  margin-bottom: 16px;
+}
+
+.result-loading {
+  font-family: 'Greybeard 22px', sans-serif;
+  font-size: 22px;
+  color: #fff;
+  margin: 24px 0;
+  min-height: 36px;
+}
+
+.result-loading-smiles {
+  color: #ff4444;
+}
+
+.test-result-card {
+  display: none;
+  flex-direction: row;
+  gap: 24px;
+  align-items: flex-start;
+  justify-content: center;
+  margin-top: 24px;
+  padding: 20px;
+  background: #333;
+  border: 2px solid #fff;
+  text-align: left;
+  max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.test-result-card.ready {
+  display: flex;
+}
+
+.test-result-card-cover {
+  width: 160px;
+  height: 240px;
+  flex-shrink: 0;
+  background: #1a1a1a;
+  overflow: hidden;
+}
+
+.test-result-card-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.test-result-card-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.test-result-card-title {
+  font-family: 'Greybeard 22px', sans-serif;
+  font-size: 24px;
+  color: #fff;
+  margin-bottom: 8px;
+  text-decoration: none;
+  display: block;
+}
+
+.test-result-card-title:hover {
+  text-decoration: underline;
+  color: #ff4444;
+}
+
+.test-result-card-type {
+  font-family: 'Greybeard 22px', sans-serif;
+  font-size: 14px;
+  color: #760000;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+
+.test-result-card-genres {
+  font-size: 14px;
+  color: #ccc;
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+
+.test-result-card-desc {
+  font-size: 13px;
+  color: #999;
+  line-height: 1.4;
+}
+
+/* ── Large screen 1240–1439px ── */
+@media (min-width: 1240px) and (max-width: 1439px) {
+  .test-page {
+    width: 100%;
+    min-height: auto;
+    overflow-x: hidden;
+    overflow-y: visible;
+    box-sizing: border-box;
+  }
+
+  .test-content {
+    width: calc(100% - 160px);
+  }
+
+  .test-card {
+    min-height: auto;
+  }
+
+  .test-result {
+    width: min(800px, calc(100% - 160px));
+  }
+
+  .test-page .o-footer {
+    left: auto !important;
+    transform: none !important;
+    width: 100% !important;
+    max-width: 100%;
+    padding: 40px clamp(16px, 4vw, 80px) 60px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    box-sizing: border-box !important;
+  }
+}
+
+/* ── Small laptop 1024–1279px ── */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .test-page {
+    width: 100%;
+    min-height: auto;
+    overflow-x: hidden;
+    overflow-y: visible;
+    box-sizing: border-box;
+  }
+
+  /* Release fixed 1061px content width — use 80px margins each side */
+  .test-content {
+    width: calc(100% - 160px);
+  }
+
+  /* Release fixed min-height so card grows with content */
+  .test-card {
+    min-height: auto;
+  }
+
+  /* Result screen: cap at 800px, never overflow */
+  .test-result {
+    width: min(800px, calc(100% - 160px));
+  }
+
+  /* Footer: fixed content width (1440 − 2×80), centered with side margins */
+  .test-page .o-footer {
+    left: auto !important;
+    transform: none !important;
+    width: 100% !important;
+    max-width: 100%;
+    padding: 40px clamp(16px, 4vw, 80px) 60px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    box-sizing: border-box !important;
+  }
+}
+
+/* ── Tablet 768–1023px ── */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .test-page {
+    width: 100%;
+    min-height: auto;
+    overflow: visible;
+  }
+
+  .test-content {
+    width: 680px;
+  }
+
+  .test-card {
+    min-height: auto;
+  }
+
+  .test-card-image {
+    height: 240px;
+  }
+
+  .test-card-question {
+    font-size: 26px;
+  }
+
+  .test-card-number {
+    font-size: 26px;
+  }
+
+  .test-card-nav {
+    right: 80px;
+    bottom: 40px;
+  }
+
+  .test-result {
+    width: 680px;
+  }
+
+  .test-page .o-footer {
+    left: auto;
+    transform: none;
+    width: 100%;
+    padding: 40px 48px 60px;
+    box-sizing: border-box;
+  }
+}
+
+/* ── Mobile 360–767px ── */
+@media (min-width: 360px) and (max-width: 767px) {
+  .test-page {
+    transform: none !important;
+    width: 100%;
+    min-height: auto;
+    overflow: visible;
+    padding-bottom: 40px;
+  }
+
+  /* Content area: full width */
+  .test-content {
+    width: 100%;
+    padding: 0 16px;
+    box-sizing: border-box;
+    margin-top: 16px;
+  }
+
+  /* Test card */
+  .test-card {
+    min-height: auto;
+  }
+
+  .test-card-image {
+    height: 200px;
+  }
+
+  .test-card-body {
+    padding: 16px 16px 60px;
+    gap: 16px;
+  }
+
+  .test-card-question {
+    font-size: 20px;
+  }
+
+  .test-card-number {
+    font-size: 22px;
+  }
+
+  .test-card-options {
+    max-width: 100%;
+  }
+
+  /* Nav buttons: pull out of absolute position into flow */
+  .test-card-nav {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    padding: 12px 0 4px;
+    gap: 16px;
+  }
+
+  /* Progress dots */
+  .test-progress {
+    left: auto;
+    transform: none;
+    max-width: 100%;
+    padding: 0 16px;
+    box-sizing: border-box;
+  }
+
+  /* Result screen */
+  .test-result {
+    width: calc(100% - 32px);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 16px;
+    box-sizing: border-box;
+  }
+
+  .test-result-card {
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+  }
+
+  .test-result-card-cover {
+    width: 100%;
+    max-width: 200px;
+    height: 300px;
+  }
+
+  /* Footer — match index.html mobile layout (shared.css grid takes over) */
+  .test-page .o-footer {
+    left: auto;
+    transform: none;
+    width: 100%;
+    padding: 0;
+    margin-top: 32px;
+  }
+}
